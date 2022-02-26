@@ -108,7 +108,7 @@ Below is a summary of my main projects. It covers ICs, algorithms, and the neuro
 <p style="text-align:justify">The ODIN 256-neuron 64k-synapse neuromorphic processor (28-nm CMOS) highlights how design constraints on the synapses can be released by offloading most synaptic computations at the neuron level. All synapses embed spike-driven synaptic plasticity (SDSP), while neurons are able to phenomenologically reproduce the 20 Izhikevich behaviors of cortical spiking neurons. At the time of publication, ODIN demonstrated the highest neuron and synapse densities, and the lowest energy per synaptic operation among digital designs.</p>
 <p style="text-align:center"><a class="btn_transparent" href="#FrenkelISCAS17" target="_blank">Synapse block (ISCAS'17)</a> &nbsp; <a class="btn_transparent" href="#FrenkelBioCAS17" target="_blank">Neuron block (BioCAS'17)</a></p>
 <p style="text-align:center"><a class="btn_transparent" href="#FrenkelTBioCAS19a" target="_blank">Chip (Trans. BioCAS'19)</a> &nbsp; <a class="btn_transparent" href="#CeoliniFrenkelShresthaFrontiers20" target="_blank">EMG classif. (Front. Neur.'20)</a></p>
-<p style="text-align:center"><a class="btn_link_2" href="https://github.com/ChFrenkel/ODIN" target="_blank">Open-source code</a></p>
+<p style="text-align:center"><a class="btn_link_2" href="https://github.com/ChFrenkel/ODIN" target="_blank">Open-source HW</a></p>
 </div>
 
 <h5>The MorphIC neuromorphic processor (2017-2020)</h5>
@@ -132,6 +132,17 @@ Below is a summary of my main projects. It covers ICs, algorithms, and the neuro
 <div class="2 col card">
 <p style="text-align:justify">SPOON exploits input temporal coding to take advantage of the sparsity of spike-based image sensors for low-power always-on edge detection. Event-driven and frame-based computation are combined to maximize data reuse. SPOON demonstrates, for the first time, that a neuromorphic processor can reach a competitive accuracy-efficiency tradeoff compared to conventional task-specific ANN accelerators. It also embeds an optimized on-chip implementation of <a href="#DRTP">our DRTP algorithm</a>, thereby providing on-the-fly adaptation to new features in incoming data at only ~15-% power and area overheads. These key results led to a <span class="text_bold">best paper award</span> at ISCAS 2020. The chip fabricated in 28-nm CMOS has since then been functionally validated, a journal extension is in preparation.</p>
 <p style="text-align:center"><a class="btn_transparent" href="#FrenkelISCAS20" target="_blank">Pre-silicon results (ISCAS'20)</a></p>
+</div>
+
+<h5>The ReckOn spiking recurrent neural network (2020-ongoing)</h5>
+
+<div class="2 col card">
+<img id="chip_image" src="images/chips/ReckOn.jpg">
+</div>
+
+<div class="2 col card">
+<p style="text-align:justify">ReckOn demonstrates, for the first time, end-to-end on-chip learning over second-long timescales (no external memory accesses, no pre-training). It is based on a bio-inspired alternative to backpropagation through time (BPTT), the e-prop training algorithm, which has been modified to reduce the memory overhead required for training to only 0.8% of the equivalent inference-only design. This allows for a low-cost solution with a 0.45-mm² core area and a <50-µW power budget at 0.5V for real-time learning in 28-nm FDSOI CMOS, which is suitable for an always-on deployment at the extreme edge. Furthermore, similarly to the brain, ReckOn exploits the sensor-agnostic property of spike-based information. Combined with code-agnostic e-prop-based training, this leads to a task-agnostic learning chip that is demonstrated on vision, audition and navigation tasks.</p>
+<p style="text-align:center"><a class="btn_transparent" href="#FrenkelISSCC22" target="_blank">Chip (ISSCC'22)</a> &nbsp; <a class="btn_link_2" href="https://github.com/ChFrenkel/ReckOn" target="_blank">Open-source HW</a></p>
 </div>
 
 <h4 class="add_margin_bottom_positive">Algorithms</h4>
@@ -195,6 +206,10 @@ For a full publication list together with citation data, please refer to my <a h
 <h4>Conference papers</h4>
 
 <ul>
+<li><span class="text_underline">C. Frenkel</span> and G. Indiveri, "ReckOn: A 28nm sub-mm² task-agnostic spiking recurrent neural network processor enabling on-chip learning over second-long timescales," Proc. of <span class="text_bold">IEEE International Solid-State Circuits Conference (ISSCC)</span>, Feb. 2022.<a id="FrenkelISSCC22"></a> </li>
+  <ul>
+    <a class="btn_link_2" href="https://github.com/ChFrenkel/ReckOn" target="_blank">Open-source HW</a>
+  </ul>
 <li>Y. Demirag, F. Moro, T. Dalgaty, G. Navarro, <span class="text_underline">C. Frenkel</span>, G. Indiveri, E. Vianello and M. Payvand, "PCM-trace: Scalable synaptic eligibility traces with resistivity drift of phase-change materials," Proc. of IEEE International Symposium on Circuits and Systems, May 2021. doi:<a id="DemiragISCAS21" href="https://doi.org/10.1109/ISCAS51556.2021.9401446" target="_blank">10.1109/ISCAS51556.2021.9401446</a> </li>
 <li><span class="text_underline">C. Frenkel</span>, J.-D. Legat and D. Bol, "A 28-nm convolutional neuromorphic processor enabling online learning with spike-based retinas,'' Proc. of IEEE International Symposium on Circuits and Systems (ISCAS), October 2020. doi:<a id="FrenkelISCAS20" href="https://doi.org/10.1109/ISCAS45731.2020.9180440" target="_blank">10.1109/ISCAS45731.2020.9180440</a> </li>
   <ul>
@@ -262,9 +277,12 @@ strong demonstrated achievements and leadership skills.</li>
 
 <ul>
 
-<li><span class="text_bold">Tenure-Track Assistant Professor:</span> <a href="http://microelectronics.tudelft.nl/" target="_blank">Microelectronics Department</a>, <a class="text_bold" href="https://www.tudelft.nl/en/" target="_blank">TU Delft, The Netherlands</a> <span class="hfill">From July 2022</span></li>
+<li><span class="text_bold">Tenure-Track Assistant Professor:</span> <a class="text_bold" href="http://microelectronics.tudelft.nl/" target="_blank">Microelectronics Department</a>, <a class="text_bold" href="https://www.tudelft.nl/en/" target="_blank">TU Delft, The Netherlands</a> <span class="hfill">From July 2022</span></li>
 
 <li><span class="text_bold">Postdoc:</span> <a class="text_bold" href="https://www.ini.uzh.ch/en.html" target="_blank">Institute of Neuroinformatics, UZH/ETH Zurich, Switzerland</a> <span class="btn_transparent">Advisor: <a href="https://www.ini.uzh.ch/en/research/groups/ncs.html" target="_blank">Giacomo Indiveri</a></span> <span class="hfill">2020–2022</span></li>
+<ul>
+<li><span class="text_bold">Visiting Postdoc:</span> <a class="text_bold" href="https://www.esat.kuleuven.be/micas/" target="_blank">Dept. EE - MICAS</a>, <a class="text_bold" href="https://www.kuleuven.be/english/" target="_blank">KU Leuven, Belgium</a> - <a href="https://www.esat.kuleuven.be/micas/index.php/marian-verhelst" target="_blank">Marian Verhelst</a>'s group <span class="hfill">Jan-Mar 2022</span></li>
+</ul>
 
 <li><span class="text_bold">Ph.D. Student (FNRS Research Fellow):</span> <a href="https://uclouvain.be/icteam" target="_blank">ICTEAM Institute</a>, <a class="text_bold" href="https://uclouvain.be/en/index.html" target="_blank">UCLouvain, Belgium</a></h5> <span class="btn_transparent">Advisor: <a href="https://scholar.google.com/citations?user=fAVYMYAAAAAJ&hl=en" target="_blank">David Bol</a></span> <span class="hfill">2015–2020</span></li>
   <ul>
@@ -294,9 +312,17 @@ Most of my reviewing activity is also summarized on <a href="https://publons.com
 
 <li><span class="text_bold">Guest Editor:</span> <a href="https://iopscience.iop.org/journal/2634-4386" target="_blank">IOP Neuromorphic Computing and Engineering journal</a> <span class="hfill">2021</span></li>
 
+<li><span class="text_bold">TPC:</span>
+
+<ul>
+<li>tinyML Research Symposium</a> <span class="hfill">2022</span></li>
+<li>ESSCIRC/ESSDERC (Track 12)</a> <span class="hfill">2022</span></li>
+</ul>
+
 <li><span class="text_bold">Chair:</span>
 
 <ul>
+<li>IEEE AICAS (special session)</a> <span class="hfill">2022</span></li>
 <li>IEEE ISCAS (lecture sessions)</a> <span class="hfill">2021</span></li>
 <li>IEEE MCSoC (neuromorphic track)</a> <span class="hfill">2019-2021</span></li>
 <li>IEEE APCCAS (neuromorphic track)</a> <span class="hfill">2020</span></li>
@@ -313,7 +339,7 @@ Most of my reviewing activity is also summarized on <a href="https://publons.com
 <li><span class="text_bold">Reviewer:</span>
 
 <ul>
-<li><span class="text_bold">IEEE Journals:</span> TCAS-I, TCAS-II, Trans. on BioCAS, JETCAS, Trans. on VLSI, TCAD, Trans. on Neural Networks and Learning Systems, Trans. on Cognitive and Developmental Systems, Trans. on Emerging Topics in Computing, IEEE Access.</li>
+<li><span class="text_bold">IEEE Journals:</span> JSSC, TCAS-I, TCAS-II, TBioCAS, JETCAS, TVLSI, TCAD, Trans. on Neural Networks and Learning Systems, Trans. on Cognitive and Developmental Systems, Trans. on Emerging Topics in Computing, IEEE Access.</li>
 <li><span class="text_bold">Non-IEEE Journals:</span> Nature Machine Intelligence, Elsevier Neural Networks, Frontiers in Neuroscience.</li>
 <li><span class="text_bold">Conferences:</span> IEEE ISCAS, BioCAS, S3S, APCCAS, MCSoC.</li>
 <li><span class="text_bold">Grants:</span> NWO (National Foundation for Scientific Research of the Netherlands).</li>
@@ -327,7 +353,7 @@ Most of my reviewing activity is also summarized on <a href="https://publons.com
 <div class="card" id="footer">
 
 <p><span class="text_bold text_footer">Website source:</span> <a class="text_footer" href="https://github.com/ChFrenkel/ChFrenkel.github.io" target="_blank">ChFrenkel.github.io</a> <span class="text_footer">(shamelessly adapted from the lightweight website template developed by <a class="text_bold" href="https://github.com/przemyslaw-pawelczak/przemyslaw-pawelczak.github.io" target="_blank">Przemysław Pawełczak</a>)</span></p>
-<p><span class="text_bold text_footer">Last update:</span> <span class="text_footer">November 2021</span></p>
+<p><span class="text_bold text_footer">Last update:</span> <span class="text_footer">February 2022</span></p>
 
 <div>
 
